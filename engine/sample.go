@@ -6,7 +6,9 @@ import (
 	"leeif.me/Crawler/fetcher"
 )
 
-func Run(seeds ...Request) {
+type SimpleEngine struct{}
+
+func (e SimpleEngine) Run(seeds ...Request) {
 	var requests []Request
 	for _, r := range seeds {
 		requests = append(requests, r)
@@ -16,7 +18,7 @@ func Run(seeds ...Request) {
 		r := requests[0]
 		requests = requests[1:]
 
-		parseResult, err := worker(r)
+		parseResult, err := e.worker(r)
 		if err != nil {
 			continue
 		}
@@ -28,7 +30,7 @@ func Run(seeds ...Request) {
 	}
 }
 
-func worker(r Request) (ParseResult, error) {
+func (e SimpleEngine) worker(r Request) (ParseResult, error) {
 	log.Printf("Fetching url: %v", r.Url)
 	body, err := fetcher.Fetch(r.Url)
 	if err != nil {
