@@ -13,4 +13,4 @@
 - 输入：`utf-8` 编码的文本
 - 输出：`Request{URL，对应Parser}` 列表，`Item` 列表
 
-<img src = "" alt="爬虫总体算法框架">
+<img src = "http://orj2jcr7i.bkt.clouddn.com/Parser.png" alt="爬虫总体算法框架">
