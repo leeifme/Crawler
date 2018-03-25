@@ -14,3 +14,11 @@
 - 输出：`Request{URL，对应Parser}` 列表，`Item` 列表
 
 <img src = "http://orj2jcr7i.bkt.clouddn.com/Parser.png" alt="爬虫总体算法框架">
+
+### 单任务版爬虫架构
+
+<img src = "http://orj2jcr7i.bkt.clouddn.com/%E5%8D%95%E4%BB%BB%E5%8A%A1%E7%89%88%E7%88%AC%E8%99%AB%E6%9E%B6%E6%9E%84.png" alt="单任务版爬虫架构">
+
+### 并发版爬虫框架
+
+<img src = "http://orj2jcr7i.bkt.clouddn.com/%E5%B9%B6%E5%8F%91%E7%89%88%E7%88%AC%E8%99%AB%E6%9E%B6%E6%9E%84.png" alt="单任务版爬虫架构">
