@@ -22,3 +22,11 @@
 ### 并发版爬虫框架
 
 <img src = "http://orj2jcr7i.bkt.clouddn.com/%E5%B9%B6%E5%8F%91%E7%89%88%E7%88%AC%E8%99%AB%E6%9E%B6%E6%9E%84.png" alt="单任务版爬虫架构">
+
+
+#### Scheduler实现I 
+
+> **简单调度器**
+> 所有 `Worker` 共用一个输入
+
+<img src = "http://on-img.com/chart_image/59a84c4ce4b02082b1db046a.png" alt="简单调度器">
