@@ -27,6 +27,28 @@
 #### Scheduler实现I 
 
 > **简单调度器**
-> 所有 `Worker` 共用一个输入
+> - 所有 `Worker` 共用一个输入
+> - 实现效率过慢，等待耗时操作
 
 <img src = "http://on-img.com/chart_image/59a84c4ce4b02082b1db046a.png" alt="简单调度器">
+
+#### Scheduler实现II
+
+> **并发调度器**
+> - 并发分发Request
+> - 控制力弱, 分发出去的goroutine,就收不回来了；并且所有Worker都在抢同一个channel的东西，也没办法控制
+> - 限制了负载均衡
+
+<img src = "http://on-img.com/chart_image/5ab717c9e4b0a248b0e1bff4.png" alt="简单调度器">
+
+
+```go
+\\实现关键语句 
+
+func (s *SimpleScheduler) Submit(r engine.Request) {
+	go func() {
+		s.workerChan <- r
+	}()
+
+}
+```
