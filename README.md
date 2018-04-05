@@ -39,7 +39,7 @@
 > - 控制力弱, 分发出去的goroutine,就收不回来了；并且所有Worker都在抢同一个channel的东西，也没办法控制
 > - 限制了负载均衡
 
-<img src = "https://on-img.com/chart_image/5ab717c9e4b0a248b0e1bff4.png" alt="简单调度器">
+<img src = "https://on-img.com/chart_image/5ab717c9e4b0a248b0e1bff4.png" alt="并发调度器">
 
 
 ```go
